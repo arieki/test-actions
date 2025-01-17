@@ -8,27 +8,16 @@ jobs:
 
     env:
       ACTIONS_STEP_DEBUG: true
-      PCL_ENDPOINT: https://manage.dev02-head.payara.cloud
-      PCL_CLIENT_ID: OPWL6h4SUxPHa1rMZ9flPStKkxnMQj8H
+      PCL_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
+      PCL_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Check JAVA_HOME_17_X64 variable
-        run: |
-          echo "JAVA_HOME_17_X64 is set to: $RUNNER_TOOL_CACHE"
+
       - name: List environment variables
         run: printenv
-      - name: try to run java
-        run: |
-          java -version
 
-      # Set up Java (required for pcl)
-      #      - name: Set up Java 21
-      #        uses: actions/setup-java@v4
-      #        with:
-      #          java-version: '21'
-      #          distribution: 'zulu'
       - name: deploy
         uses: payara/cloud-deploy@937c03a54fc10213651eeb1cac2a3ef8995a91d0
         with:
