@@ -8,8 +8,9 @@ jobs:
 
     env:
       ACTIONS_STEP_DEBUG: true
-      PCL_ENDPOINT: https://manage.dev02-head.payara.cloud
-      PCL_CLIENT_ID: OPWL6h4SUxPHa1rMZ9flPStKkxnMQj8H
+      PCL_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
+      PCL_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
+      TOKEN: ${{ secrets.PCL_TOKEN }}
 
     steps:
       - name: Checkout
@@ -19,10 +20,11 @@ jobs:
         run: printenv
 
       - name: Use Secret in a Command
+        shell: bash
         run: |
-          echo "Using secret: ${{ secrets.PCL_ENDPOINT }}"
-          echo "Using secret: ${{ secrets.PCL_CLIENT_ID }}"
-          echo "Using secret: ${{ secrets.PCL_TOKEN }}"
+          echo "Using secret: $PCL_ENDPOINT"
+          echo "Using secret: $PCL_CLIENT_ID"
+          echo "Using secret: $TOKEN"
 
       - name: deploy
         uses: payara/cloud-deploy@937c03a54fc10213651eeb1cac2a3ef8995a91d0
