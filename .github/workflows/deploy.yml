@@ -30,7 +30,7 @@ jobs:
       #          java-version: '21'
       #          distribution: 'zulu'
       - name: deploy
-        uses: payara/cloud-deploy@5b5709807c975fc09815e112e9f4cdd119527f5b
+        uses: payara/cloud-deploy@937c03a54fc10213651eeb1cac2a3ef8995a91d0
         with:
           token: 'eyJyZWZyZXNoX3Rva2VuIjoiTUthajYyLWlYMEw3SmxfbEFVTG1EMW5WUF9TejJETEQxdTZZNklvaWxwM1dkIn0='
           subscription_name: 'Reproduce Email Arie 2024-11-28'
