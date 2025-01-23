@@ -25,5 +25,5 @@ jobs:
           subscription_name: 'Reproduce Email Arie 2024-11-28'
           namespace: 'start-dev'
           artifact_location: './samples/clusterjsp.war'
-          deploy: false
+          deploy: true
           pcl_version: '1.1.0'
