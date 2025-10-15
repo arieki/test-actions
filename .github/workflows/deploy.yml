@@ -19,7 +19,7 @@ jobs:
         run: printenv
 
       - name: deploy
-        uses: payara/cloud-deploy@master
+        uses: payara/qube-deploy@master
         with:
           token: ${{ secrets.PCL_TOKEN }}
           subscription_name: 'Reproduce Email Arie 2024-11-28'
