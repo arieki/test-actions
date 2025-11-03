@@ -8,8 +8,8 @@ jobs:
 
     env:
       ACTIONS_STEP_DEBUG: true
-      PCL_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
-      PCL_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
+      QUBE_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
+      QUBE_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
 
     steps:
       - name: Checkout
@@ -22,7 +22,7 @@ jobs:
         uses: payara/qube-deploy@CLOUD-4872_renaming
         with:
           token: ${{ secrets.PCL_TOKEN }}
-          subscription_name: 'Reproduce Email Arie 2024-11-28'
+          subscription_name: 'ARIE COMPANY KISWANTO 2025-11-03'
           namespace: 'start-dev'
           artifact_location: './samples/clusterjsp.war'
           deploy: false
