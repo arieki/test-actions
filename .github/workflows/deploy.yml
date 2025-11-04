@@ -26,4 +26,4 @@ jobs:
           namespace: 'start-dev'
           artifact_location: './samples/clusterjsp.war'
           deploy: false
-#          qube_version: 2.0.0
+          qube_version: 1.1.0
