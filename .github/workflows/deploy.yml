@@ -8,8 +8,8 @@ jobs:
 
     env:
       ACTIONS_STEP_DEBUG: true
-      QUBE_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
-      QUBE_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
+      PCL_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
+      PCL_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
 
     steps:
       - name: Checkout
