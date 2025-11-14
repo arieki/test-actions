@@ -12,7 +12,6 @@ jobs:
       PCL_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
       PCL_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
 #      latest
-      QUBE_ENDPOINT: ${{ secrets.PCL_ENDPOINT }}
       QUBE_CLIENT_ID: ${{ secrets.PCL_CLIENT_ID }}
 
     steps:
@@ -29,5 +28,6 @@ jobs:
           subscription_name: 'ARIE COMPANY KISWANTO 2025-11-03'
           namespace: 'start-dev'
           artifact_location: './samples/clusterjsp.war'
-          deploy: true
-          qube_version: '1.1.0'
+          deploy: false
+          qube_endpoint: 'https://manage.dev02-head.payara.cloud'
+          qube_version: '2.0.0'
